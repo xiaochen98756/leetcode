@@ -1,7 +1,5 @@
 package leetcode;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.util.*;
 
 public class Question {
@@ -73,7 +71,40 @@ public class Question {
     public static boolean canJump(int[] nums) {
         return false;
     }
-    public static void main(String[] args) {
 
+    /**
+     * 1. 两数之和
+     * @param nums
+     * @param target
+     * @return
+     */
+    public static int[] twoSum(int[] nums, int target) {
+        int[] a=new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            int res=target-nums[i];
+            for (int j = i+1; j <nums.length ; j++) {
+                if (nums[j]==res){
+                    a[0]=i;
+                    a[1]=j;
+                    return a;
+                }
+            }
+        }
+        return a;
+    }
+
+    /**
+     * 28. 找出字符串中第一个匹配项的下标
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr(String haystack, String needle) {
+      return 0;
+    }
+    public static void main(String[] args) {
+          int[] nums=new int[]{2,7,11,15};
+          int target=9;
+        System.out.println(twoSum(nums,target));
     }
 }
